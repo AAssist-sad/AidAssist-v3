@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "appointments": "Rendez-vous",
+    "documents": "Documents",
+    "procedures": "Démarches",
+    "profiles": "Profils",
+    "settings": "Paramètres"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue",
+    "nextAppointments": "Prochains rendez-vous",
+    "recentDocuments": "Documents récents",
+    "activeProcedures": "Démarches en cours",
+    "aidesManaged": "Personnes suivies",
+    "viewAll": "Voir tout",
+    "quickActions": "Actions rapides",
+    "newAppointment": "Nouveau RDV",
+    "addDocument": "Ajouter document",
+    "newProcedure": "Nouvelle démarche",
+    "inviteHelper": "Inviter aidant",
+    "stats": {
+      "totalProfiles": "Total Profils",
+      "appointmentsThisMonth": "RDV ce mois",
+      "documents": "Documents",
+      "procedures": "Démarches"
+    }
+  },
+  "appointments": {
+    "title": "Rendez-vous",
+    "new": "Nouveau RDV",
+    "edit": "Modifier RDV",
+    "delete": "Supprimer",
+    "noAppointments": "Aucun rendez-vous programmé",
+    "type": {
+      "consultation": "Consultation",
+      "hospital": "Hôpital",
+      "teleconsultation": "Téléconsultation",
+      "emergency": "Urgence",
+      "analysis": "Analyse",
+      "specialist": "Spécialiste"
+    },
+    "status": {
+      "scheduled": "Programmé",
+      "completed": "Terminé",
+      "cancelled": "Annulé",
+      "rescheduled": "Reporté"
+    },
+    "calendar": {
+      "month": "Mois",
+      "week": "Semaine",
+      "list": "Liste"
+    }
+  },
+  "procedures": {
+    "title": "Démarches",
+    "new": "Nouvelle démarche",
+    "noProcedures": "Aucune démarche trouvée",
+    "popularProcedures": "Démarches populaires",
+    "category": {
+      "caf": "CAF",
+      "ameli": "AMELI",
+      "cnav": "CNAV",
+      "prefecture": "Préfecture",
+      "mdph": "MDPH"
+    },
+    "status": {
+      "not_started": "Non commencé",
+      "in_progress": "En cours",
+      "completed": "Terminé",
+      "blocked": "Bloqué"
+    },
+    "priority": {
+      "low": "Faible",
+      "medium": "Moyenne",
+      "high": "Élevée",
+      "urgent": "Urgent"
+    }
+  },
+  "documents": {
+    "title": "Documents",
+    "upload": "Téléverser",
+    "category": {
+      "medical": "Médical",
+      "administrative": "Administratif",
+      "insurance": "Assurance",
+      "identity": "Identité",
+      "other": "Autre"
+    }
+  },
+  "profiles": {
+    "title": "Personnes accompagnées",
+    "new": "Ajouter une personne",
+    "noProfiles": "Aucun profil créé",
+    "createFirst": "Créer mon premier profil",
+    "manage": "Gérez les profils des personnes que vous accompagnez"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "account": "Mon compte",
+    "helpers": "Aidants",
+    "security": "Sécurité",
+    "notifications": "Notifications",
+    "help": "Aide"
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "Inscription",
+    "logout": "Déconnexion",
+    "forgotPassword": "Mot de passe oublié ?",
+    "resetPassword": "Réinitialiser",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "accountType": "Type de compte",
+    "helper": "Aidant",
+    "helpedPerson": "Proche aidé"
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "loading": "Chargement...",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "date": "Date",
+    "time": "Heure",
+    "location": "Lieu",
+    "description": "Description",
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "all": "Tous",
+    "none": "Aucun",
+    "yes": "Oui",
+    "no": "Non",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "add": "Ajouter",
+    "remove": "Retirer",
+    "confirm": "Confirmer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "finish": "Terminer",
+    "continue": "Continuer",
+    "optional": "Optionnel",
+    "required": "Obligatoire",
+    "error": "Erreur",
+    "success": "Succès",
+    "warning": "Attention",
+    "info": "Information",
+    "goHome": "Retour à l'accueil",
+    "goBack": "Page précédente",
+    "helpfulLinks": "Liens utiles",
+    "contactSupport": "Contacter le support"
+  },
+  "errors": {
+    "pageNotFound": "Page non trouvée",
+    "pageNotFoundDescription": "La page que vous recherchez n'existe pas ou a été déplacée. Vérifiez l'URL ou utilisez la navigation pour retourner à l'accueil.",
+    "stillNeedHelp": "Vous avez encore besoin d'aide ?",
+    "serverError": "Erreur serveur",
+    "networkError": "Erreur de connexion",
+    "unauthorized": "Accès non autorisé",
+    "forbidden": "Accès interdit"
+  },
+  "seo": {
+    "defaultTitle": "AidAssist - Plateforme d'aide aux démarches",
+    "defaultDescription": "Simplifiez vos démarches administratives avec AidAssist. Gestion des rendez-vous, documents et procédures pour vous et vos proches.",
+    "keywords": "aide administrative, démarches, rendez-vous médicaux, documents, aidants"
+  }
+}

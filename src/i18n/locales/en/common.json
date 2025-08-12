@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "documents": "Documents",
+    "procedures": "Procedures",
+    "profiles": "Profiles",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "nextAppointments": "Upcoming appointments",
+    "recentDocuments": "Recent documents",
+    "activeProcedures": "Active procedures",
+    "aidesManaged": "People managed",
+    "viewAll": "View all",
+    "quickActions": "Quick actions",
+    "newAppointment": "New appointment",
+    "addDocument": "Add document",
+    "newProcedure": "New procedure",
+    "inviteHelper": "Invite helper",
+    "stats": {
+      "totalProfiles": "Total Profiles",
+      "appointmentsThisMonth": "Appointments this month",
+      "documents": "Documents",
+      "procedures": "Procedures"
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "new": "New appointment",
+    "edit": "Edit appointment",
+    "delete": "Delete",
+    "noAppointments": "No appointments scheduled",
+    "type": {
+      "consultation": "Consultation",
+      "hospital": "Hospital",
+      "teleconsultation": "Teleconsultation",
+      "emergency": "Emergency",
+      "analysis": "Analysis",
+      "specialist": "Specialist"
+    },
+    "status": {
+      "scheduled": "Scheduled",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "rescheduled": "Rescheduled"
+    },
+    "calendar": {
+      "month": "Month",
+      "week": "Week",
+      "list": "List"
+    }
+  },
+  "procedures": {
+    "title": "Procedures",
+    "new": "New procedure",
+    "noProcedures": "No procedures found",
+    "popularProcedures": "Popular procedures",
+    "category": {
+      "caf": "CAF",
+      "ameli": "AMELI",
+      "cnav": "CNAV",
+      "prefecture": "Prefecture",
+      "mdph": "MDPH"
+    },
+    "status": {
+      "not_started": "Not started",
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "blocked": "Blocked"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    }
+  },
+  "documents": {
+    "title": "Documents",
+    "upload": "Upload",
+    "category": {
+      "medical": "Medical",
+      "administrative": "Administrative",
+      "insurance": "Insurance",
+      "identity": "Identity",
+      "other": "Other"
+    }
+  },
+  "profiles": {
+    "title": "Assisted persons",
+    "new": "Add a person",
+    "noProfiles": "No profiles created",
+    "createFirst": "Create my first profile",
+    "manage": "Manage the profiles of people you assist"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "My account",
+    "helpers": "Helpers",
+    "security": "Security",
+    "notifications": "Notifications",
+    "help": "Help"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset password",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "accountType": "Account type",
+    "helper": "Helper",
+    "helpedPerson": "Helped person"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "search": "Search",
+    "filter": "Filter",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "description": "Description",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "open": "Open",
+    "add": "Add",
+    "remove": "Remove",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "finish": "Finish",
+    "continue": "Continue",
+    "optional": "Optional",
+    "required": "Required",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "goHome": "Go home",
+    "goBack": "Previous page",
+    "helpfulLinks": "Helpful links",
+    "contactSupport": "Contact support"
+  },
+  "errors": {
+    "pageNotFound": "Page not found",
+    "pageNotFoundDescription": "The page you are looking for does not exist or has been moved. Check the URL or use navigation to return home.",
+    "stillNeedHelp": "Still need help?",
+    "serverError": "Server error",
+    "networkError": "Network error",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden"
+  },
+  "seo": {
+    "defaultTitle": "AidAssist - Administrative assistance platform",
+    "defaultDescription": "Simplify your administrative procedures with AidAssist. Manage appointments, documents and procedures for you and your loved ones.",
+    "keywords": "administrative help, procedures, medical appointments, documents, caregivers"
+  }
+}
