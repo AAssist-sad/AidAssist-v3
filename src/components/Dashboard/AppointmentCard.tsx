@@ -98,48 +98,47 @@ export const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment })
   return (
     <div className="card card-interactive p-6 group relative overflow-hidden animate-fade-in">
       {/* Indicateur de statut */}
-      <div className={`absolute top-0 left-0 w-1.5 h-full ${getStatusColor(appointment.status)} rounded-r-full`}></div>
-      
+      <div className={`absolute top-0 left-0 w-1 h-full ${getStatusColor(appointment.status)}`}></div>
+
       {/* En-tête */}
-      <div className="flex items-start justify-between mb-6">
+      <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <div className="flex items-start gap-3 mb-3">
-            <h3 className="font-bold text-gray-900 text-xl leading-tight tracking-tight flex-1">{appointment.title}</h3>
-            <span className={`status ${typeConfig.color} flex-shrink-0`}>
+          <div className="flex items-center gap-3 mb-2">
+            <h3 className="font-semibold text-gray-900 text-lg leading-tight tracking-tight">{appointment.title}</h3>
+            <span className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full border ${typeConfig.color}`}>
               <TypeIcon className="w-3 h-3 mr-1" />
               {typeConfig.label}
             </span>
           </div>
-          
+
           {appointment.description && (
-            <p className="text-base text-gray-700 mb-4 leading-relaxed">{appointment.description}</p>
+            <p className="text-sm text-gray-600 mb-3 leading-relaxed font-medium">{appointment.description}</p>
           )}
-          
+
           {appointment.doctorName && (
-            <div className="flex items-center gap-3 mb-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center micro-bounce">
                 <User className="w-4 h-4 text-blue-600" />
               </div>
               <div>
-                <p className="text-base font-bold text-gray-900">{appointment.doctorName}</p>
+                <p className="text-sm font-semibold text-gray-900">{appointment.doctorName}</p>
                 {appointment.specialty && (
-                  <p className="text-sm text-gray-600 font-medium">{appointment.specialty}</p>
+                  <p className="text-xs text-gray-500">{appointment.specialty}</p>
                 )}
               </div>
             </div>
           )}
         </div>
-        
+
         {/* Actions rapides */}
-        <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 flex gap-2 flex-shrink-0">
-          <button className="btn btn-ghost btn-sm focus-ring" aria-label="Modifier le rendez-vous">
+        <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 flex gap-2">
+          <button className="p-2 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors duration-200 shadow-sm">
             <Calendar className="w-4 h-4 text-blue-600" />
           </button>
-          <button 
+          <button
             onClick={() => handleLocationClick(appointment.location)}
-            className="btn btn-ghost btn-sm focus-ring"
+            className="p-2 bg-emerald-50 hover:bg-emerald-100 rounded-xl transition-colors duration-200 shadow-sm"
             title="Voir l'itinéraire"
-            aria-label="Voir l'itinéraire"
           >
             <MapPin className="w-4 h-4 text-emerald-600" />
           </button>
@@ -147,68 +146,58 @@ export const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment })
       </div>
 
       {/* Informations détaillées */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
-          <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+      <div className="space-y-3">
+        <div className="flex items-center gap-3 text-sm">
+          <div className="w-8 h-8 bg-blue-50 rounded-xl flex items-center justify-center micro-bounce">
             <Calendar className="w-4 h-4 text-blue-600" />
           </div>
-          <div className="flex-1">
-            <div className="font-bold text-gray-900 text-base">{dateStr}</div>
-            <div className="text-sm text-gray-600 font-medium">à {timeStr}</div>
+          <div>
+            <span className="font-semibold text-gray-900">{dateStr}</span>
+            <span className="text-gray-600 ml-2">à {timeStr}</span>
           </div>
         </div>
-        
-        <div className="flex items-center gap-4 p-3 bg-emerald-50 rounded-xl border border-emerald-100">
-          <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+
+        <div className="flex items-center gap-3 text-sm">
+          <div className="w-8 h-8 bg-emerald-50 rounded-xl flex items-center justify-center micro-bounce">
             <Clock className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="flex-1">
-            <div className="font-bold text-gray-900 text-base">{appointment.duration} minutes</div>
-            <div className="text-sm text-gray-600 font-medium">Durée estimée</div>
-          </div>
+          <span className="text-gray-700 font-semibold">{appointment.duration} minutes</span>
         </div>
-        
-        <div className="flex items-center gap-4 p-3 bg-violet-50 rounded-xl border border-violet-100">
-          <div className="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
+
+        <div className="flex items-center gap-3 text-sm">
+          <div className="w-8 h-8 bg-violet-50 rounded-xl flex items-center justify-center micro-bounce">
             <MapPin className="w-4 h-4 text-violet-600" />
           </div>
-          <div className="flex-1 min-w-0">
-            <div className="font-bold text-gray-900 text-base truncate">{appointment.location}</div>
-            <div className="text-sm text-gray-600 font-medium">Lieu du rendez-vous</div>
-          </div>
-          <div className="flex-shrink-0">
+          <div className="flex items-center justify-between flex-1">
+            <span className="text-gray-700 font-semibold truncate">{appointment.location}</span>
             <button
               onClick={() => handleLocationClick(appointment.location)}
-              className="btn btn-ghost btn-sm focus-ring"
+              className="ml-2 p-1 text-violet-600 hover:text-violet-800 hover:bg-violet-50 rounded transition-colors duration-200 micro-bounce"
               title="Ouvrir dans Google Maps"
-              aria-label="Ouvrir dans Google Maps"
             >
-              <ExternalLink className="w-4 h-4 text-violet-600" />
+              <ExternalLink className="w-3 h-3" />
             </button>
           </div>
         </div>
-        
+
         {appointment.accompaniedBy && (
-          <div className="flex items-center gap-4 p-3 bg-amber-50 rounded-xl border border-amber-100">
-            <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
+          <div className="flex items-center gap-3 text-sm">
+            <div className="w-8 h-8 bg-amber-50 rounded-xl flex items-center justify-center micro-bounce">
               <User className="w-4 h-4 text-amber-600" />
             </div>
-            <div className="flex-1">
-              <div className="font-bold text-gray-900 text-base">Accompagné par</div>
-              <div className="text-sm text-gray-600 font-medium">{appointment.accompaniedBy}</div>
-            </div>
+            <span className="text-gray-700 font-semibold">Accompagné par {appointment.accompaniedBy}</span>
           </div>
         )}
       </div>
 
       {/* Rappel */}
-      {appointment.reminder.enabled && (
-        <div className="mt-6 pt-4 border-t border-gray-100 animate-fade-in">
-          <div className="flex items-center gap-3 p-3 bg-yellow-50 rounded-xl border border-yellow-100">
-            <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
+      {appointment.reminder && appointment.reminder.enabled && (
+        <div className="mt-4 pt-4 border-t border-gray-100 animate-fade-in">
+          <div className="flex items-center gap-2 text-xs">
+            <div className="w-6 h-6 bg-yellow-50 rounded-lg flex items-center justify-center micro-bounce">
               <Clock className="w-3 h-3 text-yellow-600" />
             </div>
-            <span className="text-sm text-gray-700 font-bold">
+            <span className="text-gray-600 font-semibold">
               Rappel {appointment.reminder.timeBeforeInMinutes} min avant
             </span>
           </div>
@@ -217,16 +206,10 @@ export const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment })
 
       {/* Notes */}
       {appointment.notes && (
-        <div className="mt-6 pt-4 border-t border-gray-100 animate-fade-in">
-          <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-            <h5 className="text-sm font-bold text-gray-900 mb-2 flex items-center">
-              <FileText className="w-4 h-4 mr-2 text-gray-600" />
-              Notes
-            </h5>
-            <p className="text-sm text-gray-700 leading-relaxed">
+        <div className="mt-4 pt-4 border-t border-gray-100 animate-fade-in">
+          <p className="text-xs text-gray-600 italic leading-relaxed bg-gray-50 p-3 rounded-xl font-medium">
             {appointment.notes}
           </p>
-          </div>
         </div>
       )}
     </div>

@@ -5,7 +5,7 @@ import { NewDocumentModal } from './NewDocumentModal';
 import { NewProcedureModal } from './NewProcedureModal';
 import { InviteHelperModal } from './InviteHelperModal';
 import { QuickMessageModal } from './QuickMessageModal';
-import { GlobalSearchModal } from '../Search/GlobalSearchModal';
+import { GlobalAiSearchModal } from '../AISearch/GlobalAiSearchModal';
 import { Appointment } from '../../types';
 import { AidedPerson } from '../../types';
 
@@ -22,21 +22,21 @@ export const QuickActions: React.FC<QuickActionsProps> = ({ appointments, onNavi
   const [showNewProcedureModal, setShowNewProcedureModal] = useState(false);
   const [showInviteHelperModal, setShowInviteHelperModal] = useState(false);
   const [showQuickMessageModal, setShowQuickMessageModal] = useState(false);
-  const [showGlobalSearchModal, setShowGlobalSearchModal] = useState(false);
+  const [showGlobalAiSearchModal, setShowGlobalAiSearchModal] = useState(false);
 
   const actions = [
     {
-      id: 'search',
-      title: 'Recherche info',
-      description: 'Recherche globale',
+      id: 'ai-search',
+      title: 'Recherche IA',
+      description: 'Analyser des symptômes',
       icon: Search,
       color: 'bg-amber-500 hover:bg-amber-600',
-      onClick: () => setShowGlobalSearchModal(true)
+      onClick: () => setShowGlobalAiSearchModal(true)
     },
     {
       id: 'appointment',
       title: 'Nouveau RDV',
-      description: 'Programmer un rendez-vous',
+      description: 'Programmer un rendez-vous médical',
       icon: Calendar,
       color: 'bg-blue-500 hover:bg-blue-600',
       onClick: () => setShowNewAppointmentModal(true)
@@ -44,7 +44,7 @@ export const QuickActions: React.FC<QuickActionsProps> = ({ appointments, onNavi
     {
       id: 'document',
       title: 'Ajouter document',
-      description: 'Téléverser un fichier',
+      description: 'Télécharger un nouveau document',
       icon: FileText,
       color: 'bg-green-500 hover:bg-green-600',
       onClick: () => setShowNewDocumentModal(true)
@@ -223,9 +223,9 @@ export const QuickActions: React.FC<QuickActionsProps> = ({ appointments, onNavi
         onSend={handleSendMessage}
       />
 
-      <GlobalSearchModal
-        isOpen={showGlobalSearchModal}
-        onClose={() => setShowGlobalSearchModal(false)}
+      <GlobalAiSearchModal
+        isOpen={showGlobalAiSearchModal}
+        onClose={() => setShowGlobalAiSearchModal(false)}
         onNavigate={onNavigate}
       />
     </>

@@ -436,9 +436,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
                         className="apple-button-secondary micro-bounce focus-visible flex items-center space-x-1 lg:space-x-2 px-2 lg:px-3 py-1 lg:py-1.5 text-xs lg:text-sm"
                       >
                         <span className="hidden sm:inline">{t('dashboard.viewAll')}</span>
-                        <span className="hidden sm:inline">{t('dashboard.viewAll') || 'Voir tout'}</span>
-                        <span className="hidden sm:inline">{t('dashboard.viewAll') || 'Voir tout'}</span>
-                        <span className="hidden sm:inline">{t('dashboard.viewAll') || 'Voir tout'}</span>
                         <span className="sm:hidden">Tout</span>
                         <ChevronRight className="w-3 h-3 lg:w-4 lg:h-4" />
                       </button>
@@ -478,7 +475,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
                     Alertes
                   </h2>
                   <button className="apple-button-secondary micro-bounce focus-visible flex items-center space-x-1 lg:space-x-2 px-2 lg:px-3 py-1 lg:py-1.5 text-xs lg:text-sm">
-                    <span className="hidden sm:inline">Tout voir</span>
+                    <span className="hidden sm:inline">{t('dashboard.viewAll')}</span>
                     <span className="sm:hidden">Tout</span>
                     <ChevronRight className="w-3 h-3 lg:w-4 lg:h-4" />
                   </button>

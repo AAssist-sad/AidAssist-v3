@@ -1,15 +1,14 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-import { 
-  LayoutDashboard, 
-  Calendar, 
-  FileText, 
-  ClipboardList, 
-  Users, 
+import {
+  LayoutDashboard,
+  Calendar,
+  FileText,
+  ClipboardList,
+  Users,
   Settings,
   Heart,
-  Menu,
   X,
   LogOut
 } from 'lucide-react';
@@ -46,12 +45,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       }
     }
   };
+
   return (
     <>
       {/* Mobile Overlay */}
       {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" 
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onToggle}
         />
       )}
@@ -60,7 +60,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       <div className={`fixed left-0 top-0 h-full bg-white/95 backdrop-blur-xl border-r border-gray-200 z-50 transform transition-all duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:static lg:z-auto w-72 flex flex-col shadow-xl lg:shadow-none`}>
-        
+
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-100 animate-fade-in bg-gradient-to-r from-blue-50 to-indigo-50">
           <div className="flex items-center gap-3">
@@ -86,11 +86,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           {menuItems.map((item) => {
             const Icon = item.icon;
             const active = location.pathname === `/${item.id}`;
-            
+
             return (
               <button
                 key={item.id}
-                onClick={() => navigate(`/${item.id}`)}
+                onClick={() => {
+                  navigate(`/${item.id}`);
+                  onToggle(); // <-- ferme le menu mobile après sélection
+                }}
                 className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl text-left transition-all duration-200 focus-ring group ${
                   active
                     ? 'bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-l-4 border-blue-600 shadow-sm font-semibold'
@@ -102,9 +105,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                   active ? 'text-blue-600' : 'text-gray-500 group-hover:scale-110'
                 }`} />
                 <span className="text-base">{item.label}</span>
-                {active && (
-                  <div className="ml-auto w-2 h-2 bg-blue-600 rounded-full"></div>
-                )}
+                {active && <div className="ml-auto w-2 h-2 bg-blue-600 rounded-full"></div>}
               </button>
             );
           })}
@@ -125,10 +126,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-bold text-gray-900 truncate">
-                {profile?.first_name && profile?.last_name 
+                {profile?.first_name && profile?.last_name
                   ? `${profile.first_name} ${profile.last_name}`
-                  : 'Marie Dupont'
-                }
+                  : 'Marie Dupont'}
               </p>
               <p className="text-xs text-gray-600 truncate font-medium">
                 {profile?.account_type === 'aidant' ? 'Aidante principale' : 'Proche aidé'}
@@ -139,7 +139,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
               </div>
             </div>
           </div>
-          
+
           {/* Logout Button */}
           <button
             onClick={handleLogout}
